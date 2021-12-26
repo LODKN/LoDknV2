@@ -10347,15 +10347,15 @@ end
 if SecondSudo(msg) then
 if text == "تحديث السورس" or text == "تحديث سورس" then 
 Dev_rek(msg.chat_id_, msg.id_, 1, '♰︙جاري تحديث سورس لودكن', 1, 'md') 
-os.execute('rm -rf TEAMLODKN.lua') 
-os.execute('wget https://raw.githubusercontent.com/TEAMLODKNTEAM/TEAMLODKN/master/TEAMLODKN.lua') 
+os.execute('rm -rf LoDknV2.lua') 
+os.execute('wget https://raw.githubusercontent.com/LoDkn/LoDknV2/master/LoDknV2.lua') 
 dofile('TEAMLODKN.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n          ( تم تحديث السورس )          \n\27[0;34;49m\n") 
 Dev_rek(msg.chat_id_, msg.id_, 1, '♰︙تم التحديث الى الاصدار الجديد', 1, 'md') 
 end
 if text == 'تحديث' or text == 'تحديث البوت' or text == '♰ تحديث ♰' then  
-dofile('TEAMLODKN.lua') 
+dofile('LoDknV2.lua') 
 io.popen("rm -rf ../.telegram-cli/*")
 print("\27[31;47m\n        ( تم تحديث ملفات البوت )        \n\27[0;34;49m\n") 
 Dev_rek(msg.chat_id_, msg.id_, 1, "♰︙تم تحديث ملفات البوت", 1, "md")
@@ -10376,7 +10376,7 @@ end
 send(msg.chat_id_, msg.id_,Files)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/TEAMLODKNTEAM/TEAMLODKNFiles/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/LoDkn/LoDknV2Files/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
