@@ -98,7 +98,7 @@ cd $HOME/LoDknV2
 while(true) do
 rm -fr ../.telegram-cli
 screen -S LoDknV2 -X kill
-screen -S LoDknV2 ./TEAMLODKN.sh
+screen -S LoDknV2 ./LoDknV2.sh
 done
 ]]) 
 file:close() 
